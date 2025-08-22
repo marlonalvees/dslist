@@ -12,6 +12,7 @@ public class Game {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
      private Long id;
      private String title;
+
     // Aqui costumizamos o nome da coluna no BD para evitar conflito, pois 'year' é uma palavra reservada do BD
      @Column( name = "game_year")
      private Integer year;
@@ -19,6 +20,7 @@ public class Game {
      private String platforms;
      private Double score;
      private String imgUrl;
+
     // Macete para aceitar texto longo no BD
     @Column(columnDefinition = "TEXT")
      private String shortDescription;
